@@ -6,13 +6,34 @@ void main() {
     theme: ThemeData(
       primarySwatch: Colors.green
     ),
-    home: Scaffold(
+     
+  ));
+}
+
+
+class TelaInicial extends StatefulWidget{
+  @override
+  _TelaInicialState createState() => _TelaInicialState();
+}
+
+class _TelaInicialState extends State<TelaInicial> {
+  var count = 0;
+
+  void increment() {
+    count++;
+    setState(() {});
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
       appBar: AppBar(
         title: Text("Meu Primeiro App"),
       ),
       body: Center(
         child: Text(
-          "Contador\n0",
+          "Contador\n$count",
           textAlign: TextAlign.center,
         ),
         ),
@@ -20,6 +41,6 @@ void main() {
           child: Icon(Icons.add),
           onPressed: () {},
         ),
-    )
-  ));
+    );
+  }
 }
